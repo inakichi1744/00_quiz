@@ -2,4 +2,4 @@
 
 小4・小5の社会クイズをまとめたポータルページです。1つのリンクから全クイズに飛べます。
 
-▶ 一覧を開く: https://inakichi1744.github.io/quiz/
+▶ 一覧を開く: https://inakichi1744.github.io/00_quiz/
