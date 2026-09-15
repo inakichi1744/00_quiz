@@ -69,7 +69,7 @@ const Q=[
 Q.forEach(q=>{
   const a=document.createElement('a');
   a.className='card'; a.href=BASE+q.repo+'/';
-  a.innerHTML=`<span class="emoji">${q.e}</span><span class="c-title">${q.t}</span><span class="c-meta"><span class="month">${q.m}</span>クイズに挑戦</span><span class="go">▶</span>`;
+  a.innerHTML=`<span class="emoji">${q.e}</span><span class="c-title">${q.t}</span><span class="go">▶</span>`;
   document.getElementById(q.g).appendChild(a);
 });
 </script>
