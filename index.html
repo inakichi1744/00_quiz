@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>社会クイズ一覧｜中学受験</title>
+<title>クイズ一覧｜中学受験</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Kaisei+Decol:wght@700&family=Noto+Sans+JP:wght@400;700&display=swap');
 *{box-sizing:border-box;margin:0;padding:0;}
@@ -17,7 +17,9 @@ header{text-align:center;padding:40px 16px 24px;}
 .group{margin-top:28px;}
 .group-h{display:flex;align-items:center;gap:10px;color:#e8d9b5;font-weight:700;font-size:1.05rem;margin-bottom:12px;padding-left:4px;}
 .badge-grade{font-size:.75rem;font-weight:700;color:#fff;padding:3px 12px;border-radius:999px;}
-.g4 .badge-grade{background:var(--g4);} .g5 .badge-grade{background:var(--g5);}
+.g4 .badge-grade,.r4 .badge-grade{background:var(--g4);} .g5 .badge-grade,.r5 .badge-grade{background:var(--g5);}
+.subject{font-family:'Kaisei Decol',serif;color:#e8d9b5;font-size:1.35rem;margin-top:36px;padding-bottom:6px;border-bottom:2px solid rgba(160,124,58,.4);}
+.r4 .card,.r5 .card{border-color:rgba(35,118,138,.35);}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px;}
 .card{display:grid;grid-template-columns:44px 1fr 22px;grid-template-rows:auto auto;column-gap:12px;row-gap:4px;align-items:center;
  background:var(--paper);border-radius:12px;padding:14px 16px;text-decoration:none;color:var(--ink);
@@ -34,10 +36,11 @@ footer{text-align:center;color:#8a7a5a;font-size:.78rem;margin-top:40px;padding:
 </head>
 <body>
 <header>
-  <div class="title">📚 社会クイズ一覧</div>
+  <div class="title">📚 中学受験クイズ一覧</div>
   <div class="sub">中学受験サポート ／ タップして挑戦しよう！</div>
 </header>
 <div class="wrap">
+  <div class="subject">📖 社会</div>
   <div class="group g4">
     <div class="group-h"><span class="badge-grade">小4</span> 地理・産業</div>
     <div class="grid" id="g4"></div>
@@ -45,6 +48,15 @@ footer{text-align:center;color:#8a7a5a;font-size:.78rem;margin-top:40px;padding:
   <div class="group g5">
     <div class="group-h"><span class="badge-grade">小5</span> 歴史</div>
     <div class="grid" id="g5"></div>
+  </div>
+  <div class="subject">🔬 理科</div>
+  <div class="group r4">
+    <div class="group-h"><span class="badge-grade">小4</span> 理科</div>
+    <div class="grid" id="r4"></div>
+  </div>
+  <div class="group r5">
+    <div class="group-h"><span class="badge-grade">小5</span> 理科</div>
+    <div class="grid" id="r5"></div>
   </div>
 </div>
 <footer>
@@ -64,6 +76,18 @@ const Q=[
  {g:'g5',repo:'09_g5_heian1_quiz',t:'平安時代',m:'5月',e:'🌸'},
  {g:'g5',repo:'09_g5_kamakura_quiz',t:'鎌倉時代',m:'6月',e:'🐴'},
  {g:'g5',repo:'10_g5_muromachi1_quiz',t:'室町時代',m:'7月',e:'🍵'},
+ {g:'r4',repo:'rika01_g4_hatsuga_quiz',t:'発芽と成長',e:'🌱'},
+ {g:'r4',repo:'rika02_g4_tenki_quiz',t:'天気と雲',e:'☁️'},
+ {g:'r4',repo:'rika03_g4_oto_quiz',t:'音',e:'🔊'},
+ {g:'r5',repo:'rika04_g5_fukushu4_quiz',t:'4年生の復習',e:'🔭'},
+ {g:'r5',repo:'rika05_g5_nagare_quiz',t:'流れる水と地層',e:'🏞️'},
+ {g:'r5',repo:'rika06_g5_shokubutsu_quiz',t:'植物のつくりとふえ方',e:'🌸'},
+ {g:'r5',repo:'rika07_g5_seimei_quiz',t:'生命のたん生',e:'🐟'},
+ {g:'r5',repo:'rika08_g5_denryu_quiz',t:'電流と磁石',e:'🧲'},
+ {g:'r5',repo:'rika09_g5_tokekata_quiz',t:'もののとけ方',e:'🧪'},
+ {g:'r5',repo:'rika10_g5_furiko_quiz',t:'ふりこと運動',e:'⏱️'},
+ {g:'r5',repo:'rika11_g5_nensho_quiz',t:'ものの燃え方と空気',e:'🔥'},
+ {g:'r5',repo:'rika12_g5_kaki_quiz',t:'夏期講習の復習',e:'📝'},
 ];
 Q.forEach(q=>{
   const a=document.createElement('a');
